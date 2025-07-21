@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.title("CArbon Emissions in Kenya Over the Years")
 
 # Upload CSV
-uploaded_file = st.file_uploader("C:\\Users\\hi\\Downloads\\cleaned energy dataset.csv")
+uploaded_file = st.file_uploader("C:\\Users\\hi\\Downloads\\cleaned_energy_dataset_final.csv")
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     st.success("File successfully uploaded!")

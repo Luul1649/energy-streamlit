@@ -16,7 +16,7 @@ if uploaded_file is not None:
     st.write(df)
 
     # Filter by Year Range
-    years = df["Year"]
+    years = df["year"]
     min_year, max_year = int(years.min()), int(years.max())
     start_year, end_year = st.slider("Select Year Range", min_value=min_year, max_value=max_year, value=(min_year, max_year))
 

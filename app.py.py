@@ -14,6 +14,10 @@ if uploaded_file is not None:
     # Show dataset
     st.subheader("Raw Dataset")
     st.write(df)
+    df["year"] = df["year"].astype(str).str.replace('"', '').str.strip()
+    df["year"] = pd.to_numeric(df["year"], errors='coerce')
+    df = df.dropna(subset=["year"])
+    df["year"] = df["year"].astype(int)
 
     # Filter by Year Range
     years = df["year"]

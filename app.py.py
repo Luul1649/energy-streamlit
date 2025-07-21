@@ -29,7 +29,7 @@ if uploaded_file is not None:
     # Line Chart
     st.subheader("GHG Emissions Trend")
     fig, ax = plt.subplots()
-    ax.plot(filtered_df["year"], filtered_df["ghg_Emissions"], marker='o')
+    ax.plot(filtered_df["year"], filtered_df["ghg_emissions"], marker='o')
     ax.set_xlabel("year")
     ax.set_ylabel("CARBON Emissions")
     ax.set_title("CARBON EMISSIONS vs year")
